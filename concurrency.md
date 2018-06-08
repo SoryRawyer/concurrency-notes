@@ -8,7 +8,7 @@ units of computation that are managed by the language runtime/interpreter
 Basically, the language will create some number of OS threads, then take these GTs (greenthreads) and plop them on different OS threads and/or processors as it sees fit.
 [needs citation] Some advantages (over using OS threads directly) may be: faster context switching because the language knows more about each unit than the OS knows about OS threads (what this means in practice (i.e. what the language knows about each unit) varies from language to language I think)
 
-###asynchronous
+### asynchronous
 In the loosest way, it 
 commonly used with event loop, I think.
 
