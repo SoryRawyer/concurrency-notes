@@ -44,7 +44,9 @@ values that guarantee 1) fast lookup 2) threadsafe? allocated on the stack, I th
 ### cooperative (async) concurrency:
 1) assume all your code can't run concurrently and mark all the places where it can
 2) threads are interrupted ("hey! I'm the scheduler and I'm here to say you can't run anymore!")
+
 ----------------------------
+
 # Languages and their contructs/
 ### python
 asyncio
@@ -55,9 +57,12 @@ multiprocessing
 
 Python's GIL (global interpreter lock) make preemptive concurrency impossible because you can't run two things at exactly the same time (basically, I think).
 Python's async/await keywords, then, are ways that the programmer can tell Python where it's allowed to switch tasks on em
+
 ----------------------------
+
 rust
 threading is a 1:1 model where each thread is actually an OS thread, not one of these green threads parading around as a real thread
+
 ----------------------------
 
 ## Questions:
