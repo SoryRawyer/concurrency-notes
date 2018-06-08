@@ -45,6 +45,8 @@ values that guarantee 1) fast lookup 2) threadsafe? allocated on the stack, I th
 1) assume all your code can't run concurrently and mark all the places where it can
 2) threads are interrupted ("hey! I'm the scheduler and I'm here to say you can't run anymore!")
 
+### segmented stacks
+
 ----------------------------
 
 # Languages and their contructs/
