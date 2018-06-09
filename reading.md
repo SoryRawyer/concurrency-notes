@@ -13,3 +13,11 @@ Abandoning segmented stacks in rust: https://mail.mozilla.org/pipermail/rust-dev
 thoughts on concurrency from the author of trio: https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/
 
 Blog post about how Golang's scheduler works: https://rakyll.org/scheduler/
+
+the code for golang's scheduler: https://github.com/golang/go/blob/master/src/runtime/proc.go
+
+https://en.wikipedia.org/wiki/Read-copy-update
+
+https://en.wikipedia.org/wiki/Hazard_pointer
+
+https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism
