@@ -5,9 +5,9 @@
 ### various words that I maybe know how to define:
 
 **actors**  
-used with *message passing*
-strictly distinct from CSP
-CSP uses communication via anonymous channels, whereas actors use communication based on actor addresses. so, in the actor model, you're sending a message to a specific actor. in CSP, you're just kinda putting a value somewhere and then not really caring who you're sending it to, I guess.
+used with *message passing*  
+strictly distinct from CSP  
+CSP uses communication via anonymous channels, whereas actors use communication based on actor addresses. so, in the actor model, you're sending a message to a specific actor. in CSP, you're just kinda putting a value somewhere and then not really caring who you're sending it to, I guess.  
 
 **ambient calculus**  
 
@@ -19,8 +19,8 @@ commonly used with event loop, I think.
 values that guarantee 1) fast lookup 2) threadsafe? allocated on the stack, I think? (in retrospect, being allocated on the stack doesn't seem to imply any kind of threadsafe-ness, since each thread would have it's own stack)
 
 **channels**  
-in go, a unidirectional way to send data from one goroutine to another.
-I think they behave somewhat similarly in Rust
+in go, a unidirectional way to send data from one goroutine to another.  
+I think they behave somewhat similarly in Rust  
 
 **communicating sequential processes**  
 
@@ -39,9 +39,9 @@ happens whenever a new thread is scheduled to run. the old thread's state needs 
 **data parallelism**  
 
 **event loop**  
-used with asynchronous programming?
-non-blocking operations?
-callbacks?
+used with asynchronous programming?  
+non-blocking operations?  
+callbacks?  
 
 **fork/join model**  
 at specific points in a programs execution:  
@@ -55,8 +55,8 @@ somewhat similar to the "divide and conquer" approach to algorithm design
 **Futures**  
 
 **greenthreads (aka "goroutines" or "erlang/elixir processes")**  
-units of computation that are managed by the language runtime/interpreter
-Basically, the language will create some number of OS threads, then take these GTs (greenthreads) and plop them on different OS threads and/or processors as it sees fit.
+units of computation that are managed by the language runtime/interpreter  
+Basically, the language will create some number of OS threads, then take these GTs (greenthreads) and plop them on different OS threads and/or processors as it sees fit.  
 [needs citation] Some advantages (over using OS threads directly) may be: faster context switching because the language knows more about each unit than the OS knows about OS threads (what this means in practice (i.e. what the language knows about each unit) varies from language to language I think)
 
 **hazard pointers**  
@@ -70,7 +70,7 @@ roughly equivalent to threads, but different
 **message passing**  
 
 **OS threads**  
-"special case of OS processes"
+"special case of OS processes"  
 each thread shared an address space with it's parent
 
 **OTP**  
