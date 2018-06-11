@@ -5,10 +5,15 @@
 ### various words that I maybe know how to define:
 
 **actors**  
+used with *message passing*
+strictly distinct from CSP
+CSP uses communication via anonymous channels, whereas actors use communication based on actor addresses. so, in the actor model, you're sending a message to a specific actor. in CSP, you're just kinda putting a value somewhere and then not really caring who you're sending it to, I guess.
+
+**ambient calculus**  
 
 **asynchronous**  
-In the loosest way, it is a way to execute code non-sequentially (non-blocking operations, etc.)
-commonly used with event loop, I think.
+In the loosest way, it is a way to execute code non-sequentially (non-blocking operations, etc.)  
+commonly used with event loop, I think.  
 
 **atomics**  
 values that guarantee 1) fast lookup 2) threadsafe? allocated on the stack, I think? (in retrospect, being allocated on the stack doesn't seem to imply any kind of threadsafe-ness, since each thread would have it's own stack)
@@ -16,6 +21,8 @@ values that guarantee 1) fast lookup 2) threadsafe? allocated on the stack, I th
 **channels**  
 in go, a unidirectional way to send data from one goroutine to another.
 I think they behave somewhat similarly in Rust
+
+**communicating sequential processes**  
 
 **context switching**  
 happens whenever a new thread is scheduled to run. the old thread's state needs to be saved (register values, [more stuff to be looked up later]) and the new thread's state needs to be loaded (register values, [more stuff to be looked up later])
@@ -36,6 +43,15 @@ used with asynchronous programming?
 non-blocking operations?
 callbacks?
 
+**fork/join model**  
+at specific points in a programs execution:  
+- break off and run tasks in parallel (fork)  
+- merge at a subsequent point and resume sequential execution (join)  
+
+this reminds me of using ```async with``` syntax in Python (specifically with the Trio library)  
+
+somewhat similar to the "divide and conquer" approach to algorithm design  
+
 **Futures**  
 
 **greenthreads (aka "goroutines" or "erlang/elixir processes")**  
@@ -55,8 +71,12 @@ roughly equivalent to threads, but different
 
 **OS threads**  
 "special case of OS processes"
+each thread shared an address space with it's parent
 
 **OTP**  
+
+**pi-calculus**  
+aka *process calculus*, is used to define and reason about concurrent processes
 
 **preemptive concurrency/multitasking**  
 1) assume all your code can run concurrently and mark all the places where it can't
@@ -109,3 +129,11 @@ from https://gobyexample.com/goroutines: A goroutine is a lightweight thread of 
 * a language construct that will (sometimes) map these units to actual OS threads
 
 **Do green threads minimize the cost of context switching by reusing OS threads? Do green threads even reuse OS threads?**  
+I'm assuming it varies by langauge.
+Go: I think it reuses OS threads, based on reading about it's scheduler. [citation needed]
+
+
+**What does it mean that a thread shares an address space with its parent process?**  
+
+**is it appropriate to think of the actor model as greenthreads + built-in communication constructs?**  
+I'm not sure there's much benefit to thinking about the actor mondel in terms of green threads (or is there??)
